@@ -303,10 +303,14 @@ function resetGameButton() {
     document.querySelector('.ronaldo-score').textContent = '0';
     document.querySelector('.messi-score').textContent = '0';
 }
-
+var siu = document.querySelector('.siu')
+function playSiu() {
+    siu.playAu
+}
 
 function checkRonaldoWinYes() {
     boxes.removeEventListener('click', selectBox)
+    playSiu()
     var currentRonaldoScore = Number(document.querySelector('.ronaldo-score').textContent)
     ronaldoScore.textContent = currentRonaldoScore + 1;
     var playAgainQuestion = document.querySelector('.play-again-q');    
@@ -322,16 +326,12 @@ function checkRonaldoWinYes() {
     }else {    
         result.textContent = 'Ronaldo has scored!!!'
         playAgainQuestion.textContent = 'Would you like to play again?'
-        
-        
-    
         playAgainYes.innerHTML = `<button>${'Yes'}</button>`
         playAgainNo.innerHTML = `<button>${'No'}</button>`
         var playAgainYesBtn = document.querySelector('.play-yes');
     
         playAgainYesBtn.addEventListener('click', reset)
     }
-
 }
 
 function noButtonClicked() {
@@ -339,9 +339,7 @@ function noButtonClicked() {
     var messiScore = document.querySelector('.messi-score').innerText
     if(ronaldoScore > messiScore){
         document.querySelector('.result').textContent = 'The final score is ' + ronaldoScore + ' - ' + messiScore + '. Ronaldo wins!!!'
-        resetGameNo()
-        
-        
+        resetGameNo() 
     }else if(ronaldoScore < messiScore){
         document.querySelector('.result').textContent = 'The final score is ' + ronaldoScore + ' - ' + messiScore + '. Messi wins!!!'
         resetGameNo()
@@ -349,42 +347,27 @@ function noButtonClicked() {
         document.querySelector('.result').textContent = 'The final score is ' + ronaldoScore + ' - ' + messiScore + '. The game is a tie!!!'
         resetGameNo()
     }
-    
 }
         
 function checkMessiWinYes() {
+    boxes.removeEventListener('click', selectBox)
     var currentMessiScore = Number(document.querySelector('.messi-score').textContent);
     messiScore.textContent = currentMessiScore + 1;
     var result = document.querySelector('.result');
     var playAgainQuestion = document.querySelector('.play-again-q');  
     if(messiScore.textContent === '3'){
         result.textContent = 'Messi has scored a hat trick!!!'
-
         playAgainQuestion.textContent = 'Would you like to play again?'
-
-
-
         playAgainYes.innerHTML = `<button>${'Yes'}</button>`
         playAgainNo.innerHTML = `<button>${'No'}</button>`
-
         var playAgainYesBtn = document.querySelector('.play-yes');
-
-        playAgainYesBtn.addEventListener('click', function() {
-            reset()
-        })
+        playAgainYesBtn.addEventListener('click', reset)
+    }else{
+        result.textContent = 'Messi has scored!!!'
+        playAgainQuestion.textContent = 'Would you like to play again?'
+        playAgainYes.innerHTML = `<button>${'Yes'}</button>`
+        playAgainNo.innerHTML = `<button>${'No'}</button>`
+        var playAgainYesBtn = document.querySelector('.play-yes')
+        playAgainYesBtn.addEventListener('click', reset)
     }
-    result.textContent = 'Messi has scored!!!'
-
-    playAgainQuestion.textContent = 'Would you like to play again?'
-
-
-
-    playAgainYes.innerHTML = `<button>${'Yes'}</button>`
-    playAgainNo.innerHTML = `<button>${'No'}</button>`
-
-    var playAgainYesBtn = document.querySelector('.play-yes');
-
-    playAgainYesBtn.addEventListener('click', function() {
-        reset()
-    })
 }

@@ -15,6 +15,15 @@ body {
 
 h1 {
     font-size: 48px;
+    font-weight: bolder;
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-top: 0;
 }
 
 main {
@@ -113,13 +122,13 @@ main {
 }
 
 button {
-    font-size: 24px;
+    font-size: 20px;
     transition-duration: 0.4s;
     background-color: rgb(206, 206, 206);
     border-radius: 5px;
     border: 1px solid black;
-    width: 90px;
-    height: 45px;
+    width: 80px;
+    height: 40px;
 }
 
 button:hover {
