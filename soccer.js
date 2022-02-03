@@ -303,14 +303,9 @@ function resetGameButton() {
     document.querySelector('.ronaldo-score').textContent = '0';
     document.querySelector('.messi-score').textContent = '0';
 }
-var siu = document.querySelector('.siu')
-function playSiu() {
-    siu.playAu
-}
 
 function checkRonaldoWinYes() {
     boxes.removeEventListener('click', selectBox)
-    playSiu()
     var currentRonaldoScore = Number(document.querySelector('.ronaldo-score').textContent)
     ronaldoScore.textContent = currentRonaldoScore + 1;
     var playAgainQuestion = document.querySelector('.play-again-q');    
