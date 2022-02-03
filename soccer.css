@@ -1,0 +1,134 @@
+html {
+    background-image: url(./images/WallpaperDog-10933829.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+body {
+    width: 960px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 4fr 3fr;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    font-size: 6rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(206, 206, 206);
+    opacity: 0.85;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid dodgerblue;
+    font-family: 'Prompt', sans-serif;
+    color: rgb(80, 80, 80);
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9::cue-region {
+    transition-duration: 0.4s;    
+}
+
+.reset {
+    flex-direction: row-reverse;
+    width: 960px;
+    display: flex;
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 0, 0, 0.598);
+    position: absolute;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.ronaldo, .messi {
+    height: 90%;
+    width: 90%;
+    text-align: center;
+}
+
+.ronaldo {
+    background-image: url(./images/560154.png);
+    opacity: 0.9;
+    background-size: contain;
+    border-radius: 5px;
+}
+
+.messi {
+    background-image: url(./images/argentina-argentinian-flag-png-square-large.png);
+    opacity: 0.9;
+    background-size: contain;
+    border-radius: 5px;
+}
+
+.stationary-one {
+    transform: scaleX(-1)
+}
+
+.moving-one {
+    transform: scaleX(-1)
+}
+
+.play-again {
+    display: flex;
+    justify-content: center;
+}
+
+.play-yes, .play-no {
+    padding: 0.5em;
+}
+
+button {
+    font-size: 24px;
+    transition-duration: 0.4s;
+    background-color: rgb(206, 206, 206);
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 90px;
+    height: 45px;
+}
+
+button:hover {
+    opacity: 0.5
+  }
+
+.play-again-q {
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 24px;
+}
